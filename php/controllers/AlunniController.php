@@ -5,6 +5,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 class AlunniController
 {
   public function index(Request $request, Response $response, $args){
+    sleep(3);
     $mysqli_connection = new MySQLi('my_mariadb', 'root', 'ciccio', 'scuola');
     $result = $mysqli_connection->query("SELECT * FROM alunni");
     $results = $result->fetch_all(MYSQLI_ASSOC);
