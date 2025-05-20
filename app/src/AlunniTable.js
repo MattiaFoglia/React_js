@@ -5,7 +5,7 @@ export default function AlunniTable(props) {
   return (
     <table border="1">
       {alunni.map((a) => (
-        <AlunniRiga alunno={a} caricaAlunni={caricaAlunni} />
+        <AlunniRiga alunno={a} key={a.id} caricaAlunni={caricaAlunni} />
       ))}
     </table>
   );
